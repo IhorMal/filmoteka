@@ -1,0 +1,19 @@
+
+.modal-btn.remove-from-queue {
+    width: 112px;
+    display: flex;
+    align-items: center;
+
+    
+    @media screen and (min-width: 768px) {
+        min-width: 125px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+   @media screen and (min-width: 1200px) {
+        min-width: 136px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

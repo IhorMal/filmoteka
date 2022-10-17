@@ -1,0 +1,44 @@
+<header class="header-library">
+  <div class="header-conteiner">
+    <div class="header-wrap">
+      <div class="header-lang__btn">
+        <button class="translate" id="e-lang-en">EN</button>
+        <span class="translate__span">|</span>
+        <button class="translate" id="e-lang-ua">UA</button>
+      </div>
+      <div class="switch-btn"></div>
+    </div>
+    <nav class="header-nav">
+      <a class="header-nav_logo" href="/src/index.html">
+        <svg class="header-nav_logo-icon" width="24" height="24">
+          <use href="/src/images/symbol-defs.svg#icon-film"></use>
+        </svg>
+        <span class="header-nav_logo-text">Filmoteka</span>
+      </a>
+      <ul class="header-nav_list">
+        <li class="header-nav_item">
+          <a class="header-nav_item-link home" href="/src/index.html">Home</a>
+        </li>
+        <li class="header-nav_item">
+          <a
+            class="header-nav_item-link link-activ library"
+            href="/src/library.html"
+            >My library</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="header-wraper">
+      <button class="header_btn active-btn" id="btnWatched">Watched</button>
+      <button class="header_btn" id="btnQueued">queue</button>
+    </div>
+
+    <button
+      onClick="javascript:window.open('https://savelife.in.ua/donate/', '_blank');"
+      id="zsu"
+      class="zsu"
+    >
+      Допомога ЗСУ
+    </button>
+  </div>
+</header>

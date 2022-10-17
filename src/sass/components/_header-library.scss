@@ -1,0 +1,158 @@
+.header-library {
+    text-align: center;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.56) 50%, rgba(0, 0, 0, 0.1) 100%), url('/src/images/header/library-mobail.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.56) 50%, rgba(0, 0, 0, 0.1) 100%), url('/src/images/header/library-tablet.jpg');
+    }
+
+    @media screen and (min-width: 1280px) {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.56) 50%, rgba(0, 0, 0, 0.1) 100%), url('/src/images/header/library-desktop.jpg');
+    }
+
+    & a {
+        text-decoration: none;
+    }
+}
+
+.header-nav_list {
+    display: flex;
+    list-style-type: none;
+    font-size: 12px;
+
+    @include font-size(12, 14);
+    text-transform: uppercase;
+}
+.header-nav_item {
+    margin-left: 20px;
+    transition: transform $transition-timing $transition-function;
+
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+
+.header-nav_item-link {
+    color: #fff;
+    position: relative;
+
+    &:after,
+    &:before {
+        backface-visibility: hidden;
+        border: 1px solid rgba(#FF001B, 0);
+        bottom: -2px;
+        content: " ";
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        transition: all $transition-timing $transition-function;
+        width: 0;
+    }
+
+    &:before {
+        top: -2px;
+    }
+
+    &:hover:after,
+    &:hover:before {
+        backface-visibility: hidden;
+        border-color: #FF001B;
+        transition: width $transition-timing $transition-function;
+        width: 100%;
+    }
+
+    &:hover:before {
+        width: 100%;
+    }
+}
+
+
+
+.header-nav_logo {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    margin: 0;
+    transition: color $transition-timing $transition-function;
+
+    &:hover,
+    &:active {
+        color: rgb(202, 191, 191);
+    }
+}
+
+.header-nav_logo-text {
+    font-size: 0;
+
+    @media screen and (min-width: 768px) {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+}
+
+.header_search {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+}
+
+.header_search-btn {
+    display: inline-flex;
+    background-color: inherit;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header-wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+    }
+}
+
+
+.header_btn {
+    cursor: pointer;
+    width: 130px;
+    height: 45px;
+    color: #FFF;
+    background-color: inherit;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+    transition: background-color $transition-timing $transition-function;
+    transition: border $transition-timing $transition-function;
+    text-transform: uppercase;
+    font-size: 12px;
+    @include font-size(12, 16);
+    font-weight: 500;
+    &:hover,
+    &:active {
+        background-color: #FF6B01;
+        border: 1px solid #FF6B01;
+    }
+    @media screen and (min-width: 768px) {
+            width: 150px;
+           margin-left: 30px;
+    }
+    @media screen and (min-width: 1280px) {
+        margin-left: 15px;
+    }
+}
+
+.active-btn {
+    background-color: #FF6B01;
+    border: 1px solid #FF6B01;
+}

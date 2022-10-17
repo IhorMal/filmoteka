@@ -1,0 +1,273 @@
+.modal-footer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+  
+    width: 100vw;
+    height: 100vh;
+  
+    background-color: $background-modal-footer-overlay;
+    background-image: url('..//..//images/modal-footer/back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+  
+    opacity: 0,5;
+    visibility: hidden;
+  
+    transition: opacity $transition-timing $transition-function,
+      visibility $transition-timing $transition-function;
+  
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+    
+  .modal-footer {
+    position: fixed;
+    top: 50%;
+    left: calc((100% + (100vw - 100%)) / 2);
+    z-index: 210;
+  
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    max-width: 75vw;
+    max-height: 90vh;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  
+    text-align: center;
+  
+    opacity: 0;
+    visibility: hidden;
+  
+    overflow-y: auto;
+  
+    transform: translate(-50%, -50%);
+
+    background-color: $background-modal-footer;
+    background-image: url('..//..//images/modal-footer/keyboard.jpg');
+    background-size: cover;
+    background-position: 50% 0%;
+    
+    background-repeat: no-repeat;
+  
+   
+  
+    border-radius: 24px;
+    border: 3px solid  #ffffff;
+   
+    box-shadow: 0 10px 10px -0.5px rgba(250, 248, 249, 0.2);
+  
+    transition: opacity $transition-timing $transition-function,
+      visibility $transition-timing $transition-function;
+  
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .modal-footer::-webkit-scrollbar {
+    display: none;
+    width: 5px;
+    background-color: transparent; 
+  }
+
+  .modal-footer::-webkit-scrollbar-thumb {
+     background-color: #e64c4c;
+    
+  }
+
+  .modal-footer__title {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+  
+    font-family: $main-font;
+    font-weight: 600;
+    @include font-size(34, 26);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  
+    color: $modal-footer-title;
+  }
+
+  .modal__close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 30px;
+    height: 30px;
+    padding: 0;
+  
+    color: $modal-footer-team-text;
+  
+    background-color: transparent;
+    border-radius: 50%;
+  
+    border-width: 0;
+    cursor: pointer;
+  
+    transition: color $transition-timing $transition-function,
+      background-color $transition-timing $transition-function,
+      transform $transition-timing $transition-function;
+  
+    &:hover,
+    &:focus {
+      color: $hover-color;
+      background-color: $modal-footer-card-border-color;
+      border: 2px solid rgba(192, 53, 53, 0.25);
+      box-shadow: 4px 4px 4px rgba(192, 53, 53, 0.25);
+  
+      // transform: scale(1.02);
+    }
+  }
+  
+  .modal__close-button-icon {
+    stroke: currentColor;
+  }
+
+  body {
+  
+  &.modal-is-open {
+    overflow-y: hidden;
+  }
+}
+  
+.team {  
+  background-color: $background-team;
+
+&__list {
+  display: grid;
+  justify-content: center;
+  max-width: 1140px;
+  grid-auto-rows: 420px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 0.3fr));
+  gap: 20px;
+  padding: 0;
+  
+  max-width: calc(100vw - 80px);
+  margin-left: auto;
+  margin-right: auto;
+ 
+   }
+
+&__unit {
+  overflow: hidden;
+
+  border: 2px solid;
+  border-radius: 10px;
+  border-color: $modal-footer-card-border-color;
+  padding: 4px;
+  background-color: #eeecd7ea;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+&__unit:hover,
+&__unit:focus {
+  border: 2px solid;
+  border-color: rgba(216, 21, 21, 0.25);
+  box-shadow: 4px 4px 4px rgba(192, 53, 53, 0.25);
+  transform: scale(1.03);
+}
+
+&__unit-img {
+  display: block;
+  height: 230px;
+  width: 100%;
+  border: 2px solid $modal-footer-card-border-color;
+  border-radius: 10px;
+  object-fit: cover;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &__unit-img:hover {
+    border-color: rgba(192, 53, 53, 0.25);
+    box-shadow: 4px 4px 4px rgba(192, 53, 53, 0.25);
+    transform: scale(1.03);
+  }
+
+&__text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+&__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  }
+
+&__position {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: $modal-footer-team-text;
+  margin-top: 0;
+  margin-bottom: 16px;
+  }
+}
+
+.social {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+    
+& li + li {
+  margin-left: 10px;
+}
+
+&__link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: $background-modal-footer-team;
+  border-radius: 50%;
+  border: 1px solid $modal-footer-card-border-color;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+&__icon {
+ 
+  fill: $color-passiv-icon-link;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+&__link:hover,
+&__link:focus {
+  background-color: $modal-footer-card-border-color;
+  box-shadow: 4px 4px 4px rgba(192, 53, 53, 0.25);
+}
+
+&__link:hover &__icon,
+&__link:focus &__icon {
+   fill:  $hover-color;
+}
+
+}

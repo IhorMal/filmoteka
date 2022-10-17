@@ -1,0 +1,51 @@
+  .main-div {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: grid;
+    place-items: center;
+    min-height: 100vh;
+    position: relative;
+    }
+  }
+  
+  .minion-img{
+    max-width: 621px;
+    max-height: 704px;
+  }
+  
+  .eyes-wrapper {
+    display: flex;
+    position: relative;
+    right: -10px;
+    bottom: 710px;
+
+  }
+  .eye {
+    width: 10em;
+    height: 10em;
+    border: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: 30px;
+  }
+  .eyeball {
+    height: 3.2em;
+    width: 3.2em;
+    background: radial-gradient(#271e1e 35%, #935a29 37%);
+    border-radius: 50%;
+    margin: 0.2em 3.5em;
+    position: relative;
+  }
+  .eyeball:before {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 0.7em;
+    width: 0.5em;
+    border-radius: 50%;
+    top: 13px;
+    left: 13px;
+    transform: rotate(45deg);
+  }
+  

@@ -1,0 +1,64 @@
+<header class="header">
+  <div class="header-conteiner">
+    <div class="header-wrap">
+      <div class="header-lang__btn">
+        <button class="translate" id="e-lang-en">EN</button>
+        <span class="translate__span">|</span>
+        <button class="translate" id="e-lang-ua">UA</button>
+      </div>
+      <div class="switch-btn"></div>
+    </div>
+    <nav class="header-nav">
+      <a class="header-nav_logo" href="/src/index.html">
+        <svg class="header-nav_logo-icon" width="24" height="24">
+          <use href="/src/images/symbol-defs.svg#icon-film"></use>
+        </svg>
+        <span class="header-nav_logo-text">Filmoteka</span>
+      </a>
+      <ul class="header-nav_list">
+        <li class="header-nav_item">
+          <a class="header-nav_item-link home link-activ" href="/src/index.html"
+            >Home</a
+          >
+        </li>
+        <li class="header-nav_item">
+          <a class="header-nav_item-link library" href="/src/library.html"
+            >My library</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="form-conteiner">
+      <form class="header_search">
+        <input
+          class="header_search-input"
+          placeholder="Movie search"
+          name="search"
+          autocomplete="off"
+          type="text"
+        />
+        <button class="header_search-btn" type="reset">
+          <svg class="header_search-btn_close" width="16px" height="16px">
+            <use href="/src/images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <span class="vertical-line">|</span>
+        <button class="header_search-btn-dealet" type="submit">
+          <svg class="header_search-btn_icon" width="16px" height="16px">
+            <use href="/src/images/symbol-defs.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+      <p class="form-text visually-hidden">
+        Search result not successful. Enter the correct movie name and
+      </p>
+      <button
+        onClick="javascript:window.open('https://savelife.in.ua/donate/', '_blank');"
+        id="zsu"
+        class="zsu"
+      >
+        Допомога ЗСУ
+      </button>
+    </div>
+  </div>
+</header>
